@@ -1,3 +1,11 @@
+# Our pstack fork
+
+Start with the [adapted skills and reading guide](agent-workflows/README.md), or open the [side-by-side pstack comparison](agent-workflows/UPSTREAM_COMPARISON.md). Our six skills live in `agent-workflows/`; upstream `pstack/` remains unchanged for reference.
+
+The original marketplace README follows. Its installation instructions apply to upstream Cursor plugins, not to our adapted library.
+
+---
+
 # Cursor plugins
 
 Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest.

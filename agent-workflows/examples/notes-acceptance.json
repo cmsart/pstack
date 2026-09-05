@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "task_id": "notes-persistence-example",
+  "goal": "An authenticated user can create a private note that survives a new session.",
+  "scope": "Web UI note creation and persistence; authentication implementation is unchanged.",
+  "preconditions": [
+    "Two disposable users, Alice and Bob, in separate accounts",
+    "Alice starts with an empty note list",
+    "The controller supplies a fixed candidate URL and isolated data namespace"
+  ],
+  "criteria": [
+    {
+      "id": "AC-1",
+      "outcome": "Alice can create a note through the UI and see the entered title and body.",
+      "observation_boundary": "Observe the submitted content in the note list and detail view."
+    },
+    {
+      "id": "AC-2",
+      "outcome": "The created note retains its title and body after reload and a new authenticated browser session.",
+      "observation_boundary": "Read the same record through the UI after each session boundary."
+    },
+    {
+      "id": "AC-3",
+      "outcome": "Submitting an empty title does not create a note and shows a visible explanation.",
+      "observation_boundary": "Observe the explanation and confirm the list still contains only valid prior notes."
+    },
+    {
+      "id": "AC-4",
+      "outcome": "Bob cannot see Alice's note in his list or read its content by opening its URL.",
+      "observation_boundary": "Use Bob's distinct browser session for both list and direct navigation."
+    }
+  ],
+  "required_viewports": [{"width": 1280, "height": 800}],
+  "allowed_test_doubles": [],
+  "suggestions": ["Visual polish beyond readable and operable controls is outside this example's required acceptance."]
+}

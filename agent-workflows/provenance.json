@@ -1,0 +1,214 @@
+{
+  "upstream_repository": "https://github.com/cursor/plugins",
+  "upstream_revision": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99",
+  "upstream_subdirectory": "pstack",
+  "adapted_directory": "agent-workflows",
+  "adaptation_date": "2026-09-05",
+  "scope": "Six rewritten/composed skills plus a new shared runtime contract; upstream pstack retained unchanged.",
+  "skills": {
+    "bootstrap-project-verification": [
+      "pstack/skills/create-verification-skill/SKILL.md",
+      "pstack/skills/create-verification-skill/references/feature-map-example/README.md",
+      "pstack/skills/create-verification-skill/references/feature-map-example/create-note.md",
+      "pstack/skills/create-verification-skill/references/feature-map-example/search.md"
+    ],
+    "implement-and-self-verify": [
+      "pstack/skills/poteto-mode/playbooks/feature.md",
+      "pstack/skills/principle-prove-it-works/SKILL.md",
+      "pstack/skills/blast-radius/SKILL.md",
+      "pstack/skills/tdd/SKILL.md",
+      "pstack/skills/principle-sequence-verifiable-units/SKILL.md"
+    ],
+    "validate-ui-acceptance": [
+      "pstack/skills/interrogate/SKILL.md",
+      "pstack/skills/interrogate/references/reviewer-prompt.md",
+      "pstack/skills/interrogate/references/lead-judgment.md",
+      "pstack/skills/principle-prove-it-works/SKILL.md",
+      "pstack/skills/create-verification-skill/references/feature-map-example/README.md"
+    ],
+    "repair-confirmed-failure": [
+      "pstack/skills/poteto-mode/playbooks/bug-fix.md",
+      "pstack/skills/tdd/SKILL.md"
+    ],
+    "maintain-project-verification": [
+      "pstack/skills/maintain-verification-skill/SKILL.md",
+      "pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md"
+    ],
+    "improve-agent-workflow": [
+      "pstack/skills/reflect/SKILL.md",
+      "pstack/skills/principle-encode-lessons-in-structure/SKILL.md"
+    ]
+  },
+  "sources": {
+    "pstack/LICENSE": {
+      "sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/LICENSE",
+      "destinations": [
+        "LICENSE"
+      ]
+    },
+    "pstack/skills/blast-radius/SKILL.md": {
+      "sha256": "b060df3ca85803eabbce9fab53f5cc024ca8d784bdde5513c1c1a784947523f8",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/blast-radius/SKILL.md",
+      "destinations": [
+        "skills/implement-and-self-verify/SKILL.md"
+      ]
+    },
+    "pstack/skills/create-verification-skill/SKILL.md": {
+      "sha256": "644f2551403c1bca01a2855b34611b6e7be0ce0dc5b204514c376c0f6a6e6ac4",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/create-verification-skill/SKILL.md",
+      "destinations": [
+        "skills/bootstrap-project-verification/SKILL.md"
+      ]
+    },
+    "pstack/skills/create-verification-skill/references/feature-map-example/README.md": {
+      "sha256": "cb7bd782cf89968a4ba3d58a5151db837430db92d19a6f52a906973b77b516ba",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/create-verification-skill/references/feature-map-example/README.md",
+      "destinations": [
+        "skills/bootstrap-project-verification/SKILL.md",
+        "skills/validate-ui-acceptance/SKILL.md"
+      ]
+    },
+    "pstack/skills/create-verification-skill/references/feature-map-example/create-note.md": {
+      "sha256": "644a44c74f35d38c2feb7cd05a0121fdebbb623e8dc376c185b565a581d1ccf7",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/create-verification-skill/references/feature-map-example/create-note.md",
+      "destinations": [
+        "skills/bootstrap-project-verification/SKILL.md"
+      ]
+    },
+    "pstack/skills/create-verification-skill/references/feature-map-example/search.md": {
+      "sha256": "6e87b9e7f2791a7776ba1bb83f371cd285c306c67f19d245cc4dd6ca3015c823",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/create-verification-skill/references/feature-map-example/search.md",
+      "destinations": [
+        "skills/bootstrap-project-verification/SKILL.md"
+      ]
+    },
+    "pstack/skills/interrogate/SKILL.md": {
+      "sha256": "c9a42c706a84cab50d3cf1c7cf91149bac2e0d2ad24da2b8ff518ea0918ae3bb",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/interrogate/SKILL.md",
+      "destinations": [
+        "skills/validate-ui-acceptance/SKILL.md"
+      ]
+    },
+    "pstack/skills/interrogate/references/lead-judgment.md": {
+      "sha256": "d2cea6cc308758201c6b8b82baf780947645f1ab752707ddf97fab374bf473f9",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/interrogate/references/lead-judgment.md",
+      "destinations": [
+        "skills/validate-ui-acceptance/SKILL.md"
+      ]
+    },
+    "pstack/skills/interrogate/references/reviewer-prompt.md": {
+      "sha256": "a397cc61102add709803d917fb23d726920525bf23e7c06dc4ed0b5cbeb00e54",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/interrogate/references/reviewer-prompt.md",
+      "destinations": [
+        "skills/validate-ui-acceptance/SKILL.md"
+      ]
+    },
+    "pstack/skills/maintain-verification-skill/SKILL.md": {
+      "sha256": "515c0eaa054b3f6be1b1fb06f2c2f173c80fddb58bbcac57576f89c479bc68e8",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/maintain-verification-skill/SKILL.md",
+      "destinations": [
+        "skills/maintain-project-verification/SKILL.md"
+      ]
+    },
+    "pstack/skills/poteto-mode/playbooks/bug-fix.md": {
+      "sha256": "283bd4013dc13bba1b80844b0aec9e078b9c175dcaa8fed14a08566856346515",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/poteto-mode/playbooks/bug-fix.md",
+      "destinations": [
+        "skills/repair-confirmed-failure/SKILL.md"
+      ]
+    },
+    "pstack/skills/poteto-mode/playbooks/feature.md": {
+      "sha256": "a2a04c2e4b273c0c33e4e3a22940049b60b917b064202e39bd34018356aa0926",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/poteto-mode/playbooks/feature.md",
+      "destinations": [
+        "skills/implement-and-self-verify/SKILL.md"
+      ]
+    },
+    "pstack/skills/poteto-mode/playbooks/orchestrate.md": {
+      "sha256": "8e2911af902df273504b1589747c13395229bcadc3e1e9448678a75f714dc9f6",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/poteto-mode/playbooks/orchestrate.md",
+      "destinations": [
+        "RUNTIME_CONTRACT.md"
+      ]
+    },
+    "pstack/skills/principle-encode-lessons-in-structure/SKILL.md": {
+      "sha256": "4acdb3f466efd0a433899aafce3e0f100566228b63ccff43f363a83e80624d81",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/principle-encode-lessons-in-structure/SKILL.md",
+      "destinations": [
+        "skills/improve-agent-workflow/SKILL.md"
+      ]
+    },
+    "pstack/skills/principle-make-operations-idempotent/SKILL.md": {
+      "sha256": "540738217c3da7bf513b9886924ad6a2bc77e58be867f5bd2e1831c74bf2ce70",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/principle-make-operations-idempotent/SKILL.md",
+      "destinations": [
+        "RUNTIME_CONTRACT.md"
+      ]
+    },
+    "pstack/skills/principle-prove-it-works/SKILL.md": {
+      "sha256": "9bbe6138505be34d81e9395d95d3639b384f71d71d65cc1903075126e1da1508",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/principle-prove-it-works/SKILL.md",
+      "destinations": [
+        "skills/implement-and-self-verify/SKILL.md",
+        "skills/validate-ui-acceptance/SKILL.md"
+      ]
+    },
+    "pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md": {
+      "sha256": "5b14fd656441580061f760968c828f3f4ba034242d8fa06b544763efb25e89ee",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+      "destinations": [
+        "skills/maintain-project-verification/SKILL.md",
+        "RUNTIME_CONTRACT.md"
+      ]
+    },
+    "pstack/skills/principle-sequence-verifiable-units/SKILL.md": {
+      "sha256": "7478f8160ba5701ca40c742a81e90aff12d45f53ac9191e80ad79b9763e4489f",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/principle-sequence-verifiable-units/SKILL.md",
+      "destinations": [
+        "skills/implement-and-self-verify/SKILL.md"
+      ]
+    },
+    "pstack/skills/reflect/SKILL.md": {
+      "sha256": "5c0fd61b383a2cf98dfd597544c6fc0fdd6eb90802f1ada4f92fa0762c323ebc",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/reflect/SKILL.md",
+      "destinations": [
+        "skills/improve-agent-workflow/SKILL.md"
+      ]
+    },
+    "pstack/skills/setup-pstack/SKILL.md": {
+      "sha256": "6ed4840c3005fd455e347d2a97d7fc271df7e21ecadf3298a7e2b3d46dc58701",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/setup-pstack/SKILL.md",
+      "destinations": [
+        "RUNTIME_CONTRACT.md"
+      ]
+    },
+    "pstack/skills/show-me-your-work/SKILL.md": {
+      "sha256": "b99833c41a8781a6af191487f1af37711a3198b98f9373e3c02292b8a6e09aba",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/show-me-your-work/SKILL.md",
+      "destinations": [
+        "RUNTIME_CONTRACT.md"
+      ]
+    },
+    "pstack/skills/tdd/SKILL.md": {
+      "sha256": "adad031f9e79d7f7389fa128f7af8e03344831270e282cf4e40bdacb8418c386",
+      "upstream_url": "https://github.com/cursor/plugins/blob/93b00b89ef425a9c1bac0d0b317dfc49c930ac99/pstack/skills/tdd/SKILL.md",
+      "destinations": [
+        "skills/implement-and-self-verify/SKILL.md",
+        "skills/repair-confirmed-failure/SKILL.md"
+      ]
+    }
+  },
+  "new_material": [
+    "README.md",
+    "UPSTREAM_COMPARISON.md",
+    "RUNTIME_CONTRACT.md",
+    "examples/notes-acceptance.json",
+    "examples/acceptance-scenarios.md",
+    "tools/check_library.py"
+  ],
+  "notes": [
+    "Mappings record provenance of ideas and adapted instructions; they do not assert one-to-one text copying.",
+    "No upstream Cursor Task calls, model aliases, transcript paths, or marketplace installation hooks are activated by this package."
+  ]
+}
