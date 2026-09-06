@@ -2,6 +2,8 @@
 
 Start with the [adapted skills and reading guide](agent-workflows/README.md), or open the [side-by-side pstack comparison](agent-workflows/UPSTREAM_COMPARISON.md). Our six skills live in `agent-workflows/`; upstream `pstack/` remains unchanged for reference.
 
+The [implementation plan](agent-workflows/IMPLEMENTATION_PLAN.md) preserves the architecture and recommended rollout. Use the [project handoff](agent-workflows/PROJECT_HANDOFF.md) to resume around a future product repository.
+
 The original marketplace README follows. Its installation instructions apply to upstream Cursor plugins, not to our adapted library.
 
 ---

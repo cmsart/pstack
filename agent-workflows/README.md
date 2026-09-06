@@ -6,6 +6,8 @@ This directory contains our adapted instructions, a shared runtime contract, pro
 
 ## Start reading here
 
+For the full architecture discussion and staged rollout, read the [implementation plan](IMPLEMENTATION_PLAN.md). To adopt it in a future project, use the [copyable project handoff](PROJECT_HANDOFF.md).
+
 1. [Upstream comparison](UPSTREAM_COMPARISON.md): which pstack files we borrowed from, where their ideas landed, and what changed.
 2. [Runtime contract](RUNTIME_CONTRACT.md): who owns what, what a task brief contains, how evidence and acceptance work, and what the runner will enforce.
 3. [Bootstrap project verification](skills/bootstrap-project-verification/SKILL.md): turn an app into something an agent can reliably operate and inspect.
@@ -42,6 +44,8 @@ Skills guide decisions; the runtime enforces identities, tool restrictions, evid
 
 | Path | Purpose |
 | --- | --- |
+| `agent-workflows/IMPLEMENTATION_PLAN.md` | Durable architecture, recommended milestones, decisions, and open choices |
+| `agent-workflows/PROJECT_HANDOFF.md` | Copyable prompt and project record for resuming around a real repository |
 | `agent-workflows/skills/` | Our six active skill definitions |
 | `agent-workflows/RUNTIME_CONTRACT.md` | Shared controller and reporting requirements |
 | `agent-workflows/examples/` | Reading examples and future evaluation cases |
@@ -70,7 +74,7 @@ python3 agent-workflows/tools/check_library.py
 
 The checker verifies the six entrypoints, local Markdown links, source/destination mappings, pinned source content hashes, and example criterion IDs. The Codex skill-authoring validator was also run on each new skill. These static checks do not prove model behavior, browser execution, E2B compatibility, or real defect detection. Those are the next integration/evaluation milestone.
 
-The first live pilot should bootstrap one private web app, run one successful task end to end, and demonstrate that the validator catches intentionally broken persistence and cross-user isolation. Measure misses, false failures, unresolved runs, elapsed time, and cost before adding more models.
+Start with a real web app developed interactively and an exercised verification package. The first cloud pilot should independently validate a fixed candidate and demonstrate detection of intentionally broken persistence and cross-user isolation while implementation remains interactive. Then add headless implementation and bounded repairs. Measure misses, false failures, unresolved runs, elapsed time, and cost before adding more models. See the [implementation milestones](IMPLEMENTATION_PLAN.md#implementation-milestones).
 
 ## Attribution
 
