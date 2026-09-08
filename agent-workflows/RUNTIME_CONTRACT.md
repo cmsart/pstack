@@ -1,6 +1,22 @@
 # Runtime contract
 
-This is the shared contract for the six skills in this package. It specifies the responsibilities of the future GitHub Actions/E2B runner. These are design requirements, not claims that cloud orchestration, browser tools, artifact storage, or an acceptance gate have already been implemented.
+This is the shared contract for the six skills in this package. V1 uses managed Codex cloud with self-validation, ordinary CI, and owner review. The later sections preserve the deferred GitHub Actions/E2B independent-validation design. These are requirements, not claims that a cloud integration or acceptance gate has been implemented.
+
+## V1 scope: managed Codex self-validation
+
+Use this scope unless the task explicitly selects the independent-validation mode. A v1 task supplies the feature spec, source baseline, authorized scope, operating guide, pinned skill version, actual test/browser commands, artifact destination, task limits, and publication policy. Record the resulting candidate commit and bind test evidence to the content actually exercised; disclose dirty-tree changes or differences from the submitted commit.
+
+Codex implements, runs the required automated checks, drives the changed user journey in the real browser, and reports each required criterion's observed outcome and evidence. Use `PASS`, `FAIL`, `BLOCKED`, or `INCONCLUSIVE`; unavailable checks and unsupported visual observations are not passes. Preserve failed attempts and useful partial work. Self-checks may repair within the stated budget, but a successful exit or positive summary is not acceptance.
+
+Ordinary CI reruns required checks on the submitted commit. The owner reviews the diff, spec coverage, evidence, and remaining gaps before merge under project policy. No independent agent, E2B sandbox, custom controller, controller receipt schema, or automatic acceptance gate is required in v1. Self-check artifacts are author-produced evidence, not tamper-resistant independent receipts. Verify the durable export path in the actual environment.
+
+Use the bootstrap, implementation, repair, maintenance, and improvement skills as relevant. In v1, controller-specific handoff and versioning instructions refer to the available task/CI workflow: record inputs and outcomes, retain artifacts, and apply revised guidance only to subsequent runs. Do not invent missing enforcement or block on a deferred controller. The owner supplies limits; agents report their use, while hard enforcement is claimed only where the platform/CI actually provides it. Two product repair rounds and one infrastructure replay are suggested starting defaults unless the task states otherwise.
+
+The independent validator skill, restricted validator tools, fixed candidate environment, receipt schema, and controller decision rules below apply only after that separate mode is explicitly selected. Skipping a required validator in that mode remains a failure; v1 does not pretend to have independent acceptance.
+
+## Deferred mode: independent validation
+
+Read the remaining sections when implementing or operating the independent-validation pilot. V1 readers can stop here.
 
 ## Components and ownership
 
@@ -13,7 +29,7 @@ This is the shared contract for the six skills in this package. It specifies the
 | Maintenance worker | Operating guide and harness corrections | Product fixes or retrospective acceptance |
 | Improvement worker | Evaluated proposals for later skill/tool versions | Hot-editing the rules of an active run |
 
-The initial configuration has one implementer and one independent validator. Provider/model identifiers are explicit configuration inputs. An optional second validator uses the same spec and fixed candidate, isolated fixtures, and fresh context. A model change is recorded and evaluated; unavailable models cause a visible configuration failure rather than a silent substitution.
+The initial configuration for this deferred mode has one implementer and one independent validator. Provider/model identifiers are explicit configuration inputs. An optional second validator uses the same spec and fixed candidate, isolated fixtures, and fresh context. A model change is recorded and evaluated; unavailable models cause a visible configuration failure rather than a silent substitution.
 
 ## Task brief
 

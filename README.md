@@ -4,6 +4,8 @@ Start with the [adapted skills and reading guide](agent-workflows/README.md), or
 
 The [implementation plan](agent-workflows/IMPLEMENTATION_PLAN.md) preserves the architecture and recommended rollout. Use the [project handoff](agent-workflows/PROJECT_HANDOFF.md) to resume around a future product repository.
 
+V1 uses managed Codex cloud with our skills for implementation and browser self-validation, followed by ordinary CI and owner review. An external validator and custom cloud orchestration are deferred pending evidence of need.
+
 The original marketplace README follows. Its installation instructions apply to upstream Cursor plugins, not to our adapted library.
 
 ---

@@ -1,17 +1,17 @@
 ---
 name: implement-and-self-verify
-description: Implement an authorized web-app change, run relevant automated checks and the changed user journey, and hand off a candidate for independent acceptance.
+description: Implement an authorized web-app change, run relevant automated checks and the changed browser journey, and hand off a candidate with evidence for review.
 ---
 
 # Implement and self-verify
 
-Produce a candidate that implements the supplied acceptance specification and has been checked through both relevant automated tests and the running UI. Read the [runtime contract](../../RUNTIME_CONTRACT.md). You own product implementation and self-checks; the controller owns acceptance policy and the independent verdict.
+Produce a candidate that implements the supplied acceptance specification and has been checked through both relevant automated tests and the running UI. Read the applicable scope in the [runtime contract](../../RUNTIME_CONTRACT.md). V1 uses managed Codex self-validation, ordinary CI, and owner review. You own implementation and self-checks; independent validation is a separate optional mode.
 
 ## Establish the task boundary
 
 Read the task's criteria, allowed paths, baseline commit, operating guide, feature map, and budget. Use repository inspection or a small experiment to resolve factual questions. Record reversible implementation assumptions. If an ambiguity changes the required product behavior, identify the decision and continue only independent work; do not silently choose a new acceptance target.
 
-Do not change the authoritative task specification, validator instructions, evidence receipts, or gate configuration to make the candidate pass. Propose necessary changes to these as separate work. A specification supplied from the candidate branch is not authoritative unless the controller explicitly pins that version.
+Do not change the authoritative task specification, validator instructions, evidence receipts, or gate configuration to make the candidate pass. Propose necessary changes to these as separate work. Use the specification supplied by the owner/task or pinned by the controller, not an unapproved revision from the candidate branch.
 
 ## Implement and test
 
@@ -27,8 +27,8 @@ Use screenshots for visual state and browser records for behavior. A success toa
 
 ## Hand off the candidate
 
-Keep changes in the owned branch/checkout. Record test commands and outcomes, UI evidence, coverage by criterion, changed files, unresolved issues, and the exact candidate commit. Externalize the patch or commit through the controller's artifact path before the sandbox expires. Push or open a PR only when that action is authorized.
+Keep changes in the owned branch/checkout. Record test commands and outcomes, UI evidence, coverage by criterion, changed files, unresolved issues, and the exact candidate commit. Externalize the patch or commit and evidence through the task's verified handoff path before the sandbox expires. Push or open a PR only when that action is authorized.
 
-The controller builds the independent candidate from committed content in a fresh environment. Do not point the validator at a mutable development server or claim final acceptance based on self-checks. Self-check reports are retained for diagnosis but withheld from the validator's initial discovery pass.
+In v1, hand off the candidate and self-check evidence for CI and owner review; do not wait for a nonexistent validator or claim independent acceptance. If independent-validation mode is selected, the controller builds a fixed candidate from committed content in a fresh environment. Self-check reports are retained for diagnosis but withheld from that validator's initial discovery pass.
 
 If checks fail, repair within the task budget. If the budget, credentials, or environment block progress, return the partial result and evidence with a concrete blocker. An agent's successful process exit is not an acceptance result.

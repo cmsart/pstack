@@ -4,6 +4,8 @@
 
 Upstream baseline: [`93b00b89ef425a9c1bac0d0b317dfc49c930ac99`](https://github.com/cursor/plugins/commit/93b00b89ef425a9c1bac0d0b317dfc49c930ac99). Every source link below is pinned to that revision. [Machine-readable provenance](provenance.json) records the same mappings and source content hashes.
 
+As of 2026-09-07, v1 uses managed Codex cloud with implementation/browser self-checks, ordinary CI, and owner review. Independent validation and controller enforcement below describe the retained later mode. See the [current plan](IMPLEMENTATION_PLAN.md) and [runtime scope](RUNTIME_CONTRACT.md).
+
 ## Side-by-side skill map
 
 | Pstack source | Our file | Kept | Changed |

@@ -7,18 +7,18 @@ description: Create and exercise a project-specific operating guide and verifica
 
 Give the next agent a tested way to start, identify, drive, observe, and clean up this app. Scope this skill to web applications. Produce a project package in the location supplied by the task; do not install global skills or configure cloud accounts as a side effect.
 
-Read the [runtime contract](../../RUNTIME_CONTRACT.md) for ownership and evidence rules. This skill has source access. Its observations describe the current application; they do not authorize acceptance requirements.
+Read the applicable scope in the [runtime contract](../../RUNTIME_CONTRACT.md) for ownership and evidence rules. V1 needs exercised application/browser commands and durable self-check evidence; the independent controller and receipt schema are deferred. This skill has source access. Its observations describe the current application; they do not authorize acceptance requirements.
 
 ## Discover the real operating path
 
 Read the repository's startup documentation, package commands, existing browser tests, routes, authentication, and fixture setup. Reuse working tools before building replacements. Establish:
 
 - The build/start commands, required environment variable names, readiness condition, and shutdown mechanism.
-- How to identify the candidate commit and build using controller-owned metadata; the app's own version label is only supplementary evidence.
+- How to identify the tested commit and build from checkout/CI records, or controller-owned metadata in independent mode; the app's own version label is only supplementary evidence.
 - How to create disposable users and isolated server-side data, reset them, and open clean browser contexts. Browser context isolation alone does not isolate a database.
 - Which external services are real, test-mode, or stubbed; what behavior each substitute cannot establish.
 - The actual browser capability available to the agent, including screenshots and action/assertion records. Do not invent a tool name because an upstream skill used it.
-- How the controller retains artifacts outside an ephemeral sandbox before teardown.
+- How the available task/CI workflow retains artifacts outside an ephemeral sandbox before teardown.
 
 If the base app does not start, diagnose and report the concrete cause. Fix a product defect only if the task authorizes that scope. Setup scaffolding must be labeled and isolated; it must not replace the feature under test or falsify readiness.
 
@@ -36,7 +36,7 @@ Create a source-informed `features/` index and a small initial set of feature re
 
 Keep this feature map out of the independent validator's initial brief. An observed behavior is not an acceptance requirement. Mark untested recipes as untested instead of presenting the entire map as verified.
 
-Add a project `SKILL.md` entrypoint with valid name/description that routes to these guides, and only the executable helpers they need. Document helper invocations. The controller supplies this package explicitly; this skill does not assume `.cursor`, a particular provider, or an installed plugin.
+Add a project `SKILL.md` entrypoint with valid name/description that routes to these guides, and only the executable helpers they need. Document helper invocations. The task or later controller supplies this package explicitly; this skill does not assume `.cursor`, a particular provider, or an installed plugin.
 
 ## Exercise the package
 

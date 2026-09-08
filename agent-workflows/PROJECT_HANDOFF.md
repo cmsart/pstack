@@ -1,6 +1,6 @@
 # Applying this plan to a future project
 
-This is the reusable entrypoint for a new project task. Read the [implementation plan](IMPLEMENTATION_PLAN.md) for the architecture and [runtime contract](RUNTIME_CONTRACT.md) for enforceable behavior. The skills repository supplies guidance; it does not currently supply a working cloud controller.
+This is the reusable entrypoint for a new project task. Read the [implementation plan](IMPLEMENTATION_PLAN.md) and the v1 scope in the [runtime contract](RUNTIME_CONTRACT.md). V1 uses managed Codex cloud with our skills, self-validation, ordinary CI, and owner review. The independent-validator/controller design is deferred; no cloud integration has yet been exercised by this repository.
 
 ## Resume in a new task
 
@@ -24,13 +24,19 @@ Known project constraints: <stack, services, or other constraints if known>
 Inspect the actual project and report its current milestone. Follow the
 recommended sequence: build one complete feature interactively; establish
 reproducible startup, disposable data, tests, browser verification, and evidence
-export; pilot one independent xAI Grok browser validator; then add headless
-Codex, bounded repairs, and GitHub Actions orchestration.
+export; configure managed Codex cloud with the pinned skills for implementation
+and browser self-validation; hand off to ordinary CI and owner review. Measure
+real task outcomes before deciding whether an external validator is useful.
+
+V1 does not require Grok, E2B, a custom controller, or agent-orchestration
+GitHub Actions. Those remain optional later work. Apply the contract's v1 scope;
+do not block v1 on the deferred independent-validation schemas or tools.
 
 Start with the earliest unmet milestone relevant to the feature. Use existing
 working project tooling. Do not spend the initial product task building a
-general agent platform. Recheck current provider/E2B documentation before
-integrating those services. Separate implemented/tested facts from proposals.
+general agent platform. Recheck official Codex cloud documentation during
+integration and verify browser/skill capabilities in the actual environment.
+Separate implemented/tested facts from proposals.
 
 Create or update a project handoff record using PROJECT_HANDOFF.md. Record
 working commands, important decisions, validation evidence, blockers, and the
@@ -89,7 +95,19 @@ Draft or untested:
 - Most recent fresh-environment result: <date, revision, evidence>
 - Known gaps: <...>
 
-## Cloud integration, when applicable
+## Managed Codex cloud v1
+
+- Cloud environment and setup/maintenance commands: <...>
+- Pinned package location and verified skill-loading path: <...>
+- Task trigger, spec/operating-guide inputs, and selected model: <...>
+- Browser automation, visual observation capabilities, and known limitations: <...>
+- Durable self-check evidence export and tested-content identity: <...>
+- Required PR CI checks and owner review procedure: <...>
+- Task limits, repair allowance, and observed account usage: <...>
+- Authorized branch/PR actions and merge/deployment policy: <...>
+- Last actual cloud task and evidence: <...>
+
+## Deferred independent validation, only if selected
 
 - Controller revision and trusted configuration: <...>
 - E2B template/build versions and lifecycle policy: <...>
@@ -108,6 +126,8 @@ Draft or untested:
 - Known-good and deliberately broken cases: <paths/results>
 - Misses, false failures, incomplete runs, duration, and resource usage: <...>
 - Acceptance quality targets: <owner decision or unset>
+- Human time per accepted feature versus interactive baseline: <...>
+- External validator needed? <undecided/no/pilot; evidence and decision date>
 - Decisions: <date, choice, reason, evidence>
 - Blockers / required owner decisions: <...>
 
@@ -127,8 +147,9 @@ Link the project record from the product README. Where the project uses `AGENTS.
 For agent workflow adoption and project verification, read
 docs/agent-workflow.md and the cmsart/pstack documents at the revision recorded
 there. Follow the current milestone and update the handoff with executed
-checks, evidence, decisions, and the next step. Keep source-derived feature
-recipes and builder results out of the independent validator's initial input.
+checks, evidence, decisions, and the next step. Use managed Codex self-validation
+for v1. If independent validation is later selected, keep source-derived
+recipes and builder results out of that validator's initial input.
 ```
 
 A pointer improves discovery; it does not install skills or enforce a pipeline stage. The eventual runner must explicitly load mandatory instructions and configure real tools. In interactive work, provide access to the relevant package without breaking its shared references.
